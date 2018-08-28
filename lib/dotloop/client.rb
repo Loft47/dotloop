@@ -1,6 +1,7 @@
 module Dotloop
   class Client
     include HTTParty
+    require 'active_support/all'
 
     base_uri 'https://www.dotloop.com/my/api/v1_0/'
 
@@ -78,9 +79,9 @@ module Dotloop
 
     def self.snakify(hash)
       if hash.is_a? Array
-        hash.map(&:to_snake_keys)
+        hash.map { |item| item.to_snake_keys.symbolize_keys }
       else
-        hash.to_snake_keys
+        hash.to_snake_keys.symbolize_keys
       end
     end
 

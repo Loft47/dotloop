@@ -30,9 +30,9 @@ RSpec.describe Dotloop::Loop do
           loop_name: 'Atturo Garay 123Main Street, Chicago, IL 60605',
           loop_status: 'Archived',
           loop_tags: [{
-            profile_id: 4_533,
-            tag_id: 2,
-            tag_name: 'Buying'
+            'profile_id' => 4_533,
+            'tag_id' => 2,
+            'tag_name' => 'Buying'
           }],
           loop_view_id: 76_046,
           transaction_type: 'Listing for Sale'
